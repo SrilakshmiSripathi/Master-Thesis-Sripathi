@@ -1,0 +1,49 @@
+\chapter{RELATED WORK}
+
+In this section, we discuss the works that are related to our current thesis, which perform sentiment analysis.
+
+%% 1 Guzman et al. [7]: Sentiment analysis of commit comments in GitHub: An empirical study
+
+Guzman et al. \cite{guzman2014sentiment} focuses on the human factor by analyzing the sentiment of 60,425 commit logs. These commit logs belong to 90 of the top starred software projects on Github. For these 90 projects, they studied the relationship between sentiment with three areas, which are programming languages, team distribution, and project approvals. Their research findings conclude that commit logs for Java projects tend to be more negative, projects with more distributed teams tend to have more positive commit logs, and commit comments on Mondays are more negatively toned.
+
+%% 2 Sinha et al. [15] : Analyzing developer sentiment in the commit log 
+
+Sinha et al. \cite{sinha2016analyzing} expanded the data to analyze the sentiment of 2M non-empty commit logs from 28K projects using BOA \cite{dyer2013boa} tool. Their research concludes that the majority of the commit logs on GitHub projects are neutral. An interesting observation is, the projects commit logs that comprise 10\% more negative emotion in comparison with positive sentiment. For some popular projects, Wednesday and Thursday commit logs are most negatively toned. Finally, a strong positive correlation exists with the sentiment in the commit logs, and the number of files changed in the commits.
+
+%% 3 Ortu et al. [12] : Are bullies more productive?: The empirical study of affectiveness vs. issue fixing time
+
+In the previous research, Ortu et al. \cite{ortu2015bullies} took a different approach to perform sentiment analysis. Their study focused on human "affectiveness" and developers' producti- vity in the Agile environment. For their analysis, they performed an empirical analysis on more than 560K comments from 14 Apache projects using the Jira issue tracking system. For the "affectiveness" metric, they concentrated on emotion, sentiment, and politeness. The research conveyed that emotions reflect on software developers' problem-solving prod- uctivity. By which, developers who post joyful comments take a shorter time to fix a problem compared to the developers with gloomy comments take longer to fix a similar problem. Additionally, they analyze politeness and its complex role in the developer's productivity. 
+
+%% 4 Souza and Silva [16] : Sentiment analysis of Travis CI builds
+
+Souza and Silva \cite{souza2017sentiment} analyzed the sentiment of the commit logs belonging to the Travis CI continuous integration server. Their dataset includes 1,262 Github projects. Concluding that the build process can both be "affects" and "affected" by negative sentiment, and developers writing continuous integration servers are more positive while writing com- mit messages. 
+
+%% 5 Garcia et al. [4] : The role of emotions in contributors activity: A case study on the GENTOO community
+
+Garcia et al. \cite{garcia2013role}, performed sentiment analysis on the open-source project GENTOO using the bug tracking platform BUGZILLA, to study the relation between emotions and activity of contributors. The study finds that whenever strong positive emotions or negative emotions or when an unexpected emotional deviation occurs, contributors are likely to abandon the project.
+
+%% 6 Bazelli et al [2] : On the personality traits of StackOverflow users
+
+Bazelli et al. \cite{bazelli2013personality}, this study explores the personality traits of the Stackoverflow users by studying the relations between the sentiment of the developer's answers and their reputation. This study finds that the top-rated users express strong positive emotions in their answers compared to medium and low ranked users and that users with a higher number of favorites posts express more positive emotion than users with a lower number of favorite posts.
+
+%% 7 Muriga et al. [10] : Do developers feel emotions? an exploratory analysis of emotions in software artifacts
+Muriga et al. \cite{murgia2014developers}, studied if issue reports carry any emotional information. Their dataset uses 117 open source projects belonging to Apache software. This study confirms that issue reports reportedly have emotions that can affect design choices, maintenance activity, and colleagues.
+
+%%\section{Using Sentiment to Identify Software Properties}
+
+%% 1 Rahman et al. [14] : Recommending insightful comments for source code using crowdsourced knowledge
+
+Rahman et al. \cite{rahman2015recommending}, studies automated code comment generation by analyzing 292 Stackoverflow code fragments and 5K discussion comments. The study finds that with high precision and recall, insightful comments can be extracted. 80\% of auto-generated comments are accurate, precise, concise, and useful for the participants. 
+
+%% 2 Zhang and Hou [18] : Extracting problematic API features from forum discussions
+
+Zhang and Hou \cite{zhang2013extracting}, proposes ways to extract problematic API features using online discussion forums, and for this analysis, they use sentiment analysis to determine the polarity of posted
+sentences. This study mainly focuses on the negative sentiment for their analysis. 
+
+%% 3 Goul et al. [5] : Managing the enterprise business intelligence app store: Sentiment analysis supported requirements engineering. 
+
+%% 4 Panichella et al. [13]: How can i improve my app? classifying user reviews for software maintenance and evolution
+
+Similarly, Goul et al. \cite{goul2012managing}, used sentiment analysis to determine the usefulness and interaction of employees while utilizing business intelligence apps. Panichella et al. \cite{panichella2015can}, uses sentiment analysis to determine apps usability, apps that are available on Google Play, and Apple Stores by checking users' comments and categorizing the comments as software maintenance, evolution, bug tracking and more.
+
+The primary resource that we use in this study to perform our sentiment analysis is Ahmed and Bagherzadeh \cite{ahmed2018concurrency} for concurrency dataset. For the big data dataset, we used Bagherzadeh and Khatchadourian \cite{bagherzadeh2019going}. Specifically, it evaluates topic modeling, popularity, and difficulty metrics and their correlations. 

@@ -1,0 +1,30 @@
+% 2. INTRODUCTION of the Thesis Template File
+%\ch{1}
+\chapter{INTRODUCTION}
+
+\begin{center}
+``Happy software developers solve problems better'' - Graziotin et al. \cite{graziotin2014happy}
+\end{center}
+
+In the current software development environment, a software developer's sentiment towards a task may have an impact on their productivity and the overall quality of the software they develop. Understanding this role of the sentiment can help developers and research communities to help in the improvement of the developer's overall throughput.
+
+For the last three decades, improving software quality and software developers' productivity has been a focus; amongst different factors, the people factor has been conside- red one of the vital factors \cite{graziotin2014happy, boehm1988understanding}. So, in recent years, the software engineering community has been focused on software developer's sentiment, as human emotions are volatile and can have a direct impact on their productivity. For instance, developers with a positive sentiment are more likely to be creative and have better analytical problem-solving skills, as illustrated by Graziotin et al. \cite{graziotin2014happy}. While software developers with positive sentiment can be more productive, people with negative sentiment are likely to depart from the project sooner \cite{garcia2013role}.
+
+Currently, the Stackoverflow \cite{stackoverflow2019} website has 11 million software developers as its participants. The platform has 46 million questions and answers posted by those participants, with an average of 6.8 thousand new questions posted daily, and with 10 million visitors to Stackoverflow a day. To enhance their knowledge, developers ranging from beginners to experts often visit the Stackoverflow website to post questions and receive answers from the subject matter experts in the field. For this reason, Stackoverflow is an excellent resource available to study software developers and the problems they encounter. Stackoverflow users often ask questions about software topics like Software Development, Programming Languages, and more. If a user posts a question that does not associate with Software topics, the questions get redirected by the Stackoverflow platform to the appropriate comm- unity within StackExchange. For instance, if a user posts a question related to the educational topic to the Stackoverflow platform, the question gets redirected to the Academia community, which is a subcommunity of StackExchange.
+
+To understand the role of the software developer's sentiment, we perform sentiment analysis, which is a study of lexicons within a text to determine the subjectivity and polarity. Subjectivity helps determine if the text is emotionally loaded or if it is neutrally toned. On the other hand, polarity checks if the meaning of the text is positive, negative, or neutral. The sentiment for the entire text is determined by analyzing the values for subjectivity and polarity for each lexicon. We are interested in analyzing the role of the sentiment with software topics that are difficult to understand and concepts that are currently popular. 
+
+In this thesis, we conducted a large-scale study on the Stackoverflow questions and answers for big data and concurrency software development. We focused our attention on the software developer's sentiment and its correlations with popularity and difficulty by answering the research questions \emph{\textbf{R1}} to \emph{\textbf{R4}}, as shown below. To perform our analysis, we rely on two previous works on concurrency and big data \cite{ahmed2018concurrency, bagherzadeh2019going}. We considered concurrency topics since developers find it challenging to develop concurrency programs, while big data topics are currently popular concepts. The concurrency dataset \cite{ahmed2018concurrency} has 250K questions and answers with 29 concurrency topics, and the study calculates the difficulty and popularity percentages. Similarly, in the big data dataset, the dataset has 150K questions and answers with 27 big data topics, and the study calculates the difficulty and popularity percentages. 
+
+We study the relationship between sentiment with both popularity and difficulty metrics by computing the sentiment for each topic in the two datasets and find if a correlation exists to understand the following questions:
+
+\emph{\textbf{R1}}. Is there a relation between sentiment with popularity and sentiment with difficulty in concurrency topics?
+%\label{textR1}
+
+\emph{\textbf{R2}}. Is there a relation between sentiment with popularity and sentiment with difficulty in big data topics?
+
+\emph{\textbf{R3}}. What sentiment do concurrency and big data developers express towards a common topic?
+
+\emph{\textbf{R4}}. Is there a commonality in the correlations found in concurrency and big data datasets?
+ 
+This thesis's chapters are structured as follows. In Chapter 2, we discuss the dataset, sentiment analysis tool Senti4SD, and finally, we mention the steps we used to perform the analysis. In Chapter 3, we present the results of the sentiment analysis for the concurrency and big data datasets and examine the correlations. In Chapter 4, we present the implications of this study. In Chapter 5, we review works that are related to this study. Finally, we present the conclusion and the future work in Chapter 6.

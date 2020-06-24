@@ -1,0 +1,47 @@
+\begingroup
+\pagestyle{tocstyle}
+\makeatletter
+\let\ps@plain\ps@normal
+\makeatother
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\ifbookmarks
+	\newpage
+	\pdfbookmark[0]{\contentsname}{toc}	
+\fi
+
+\tableofcontents
+\cleardoublepage
+\addtolength{\textheight}{0.85in}
+\newpage
+\endgroup
+
+\phantomsection
+\addcontentsline{toc}{chapter}{LIST OF TABLES}	
+\begingroup
+\pagestyle{lotstyle}
+\makeatletter
+\let\ps@plain\ps@normal
+\makeatother
+\listoftables
+\cleardoublepage
+\addtolength{\textheight}{0.85in}
+\newpage
+\endgroup
+
+\phantomsection
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\begingroup
+\pagestyle{lofstyle}
+\makeatletter
+\let\ps@plain\ps@normal
+\makeatother
+\listoffigures
+\cleardoublepage
+\addtolength{\textheight}{0.85in}
+\newpage
+\endgroup
+
+% \phantomsection
+% \addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS}
+% %\vspace{0.07in}
+% \printglossary[style=grizz_glossary]

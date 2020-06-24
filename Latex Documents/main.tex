@@ -1,0 +1,219 @@
+% Class options:
+% 3 font choices currently:
+%  - Times New Roman (default)
+%  - Palantino ('palantino')
+%  - Bookman ('bookman')
+% Dissertation or Thesis:
+%  - Thesis (default)
+%  - Dissertation ('dissertation')
+% Include bookmarks in compilied pdf
+%  - No bookmarks (default)
+%  - Bookmarks ('bookmarks')
+
+%\documentclass[dissertation, bookmarks]{grizz_thesis}
+
+\documentclass[thesis, bookmarks]{grizz_thesis}
+
+% Uncomment this to only compile a subset of the document.  List each of the separate include
+% files with a comma
+%\includeonly{front_matter, chapter1, chapter2}
+
+% Add extra packages here
+%\usepackage{someotherpackage}
+\usepackage{cases} % allows subnumbers for pieceise functions. 1a,1b
+\usepackage{color}					%allows text to have colors
+\usepackage{siunitx} % This package is very useful for correct typesetting of numbers and units.
+%\usepackage{csquotes} %signle space block quotes 
+\usepackage{xcolor,soul}
+\usepackage{ragged2e}
+
+
+%\usepackage[none]{hyphenat}
+%\usepackage{lipsum}
+%\textwidth=5.70in
+%\def\beg{\begin{equation}} 
+%%\def\eeg{\end{equation}}
+%\def\beq{\begin{equation}} 
+%\def\eeq{\end{equation}}
+%\def\eeqc{\, , \end{equation}}
+%\def\eeqp{\, . \end{equation}}
+
+%\def\crr{\color{red}}
+%\def\cbb{\color{black}}
+
+%\usepackage{OUvar} % contains all the variables in the thesis
+%\usepackage{physics}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+
+
+\usepackage{bigints}
+
+% Makes the square root sign cooler
+%\usepackage{letltxmacro}
+%\makeatletter
+%\let\oldr@@t\r@@t
+%\def\r@@t#1#2{%
+%\setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
+%\advance\dimen0-0.4\ht0
+%\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+%{\box0\lower0.4pt\box2}}
+%\LetLtxMacro{\oldsqrt}{\sqrt}
+%\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
+%\makeatother
+
+  
+
+%allows mathematica code
+
+%\usepackage{listings,xcolor}
+%\lstset{language=Mathematica}
+%\lstset{basicstyle={\sffamily\footnotesize},
+%  numbers=left,
+%  numberstyle=\tiny\color{gray},
+%  numbersep=5pt,
+%  breaklines=true,
+%  captionpos={t},
+%  frame={lines},
+%  rulecolor=\color{black},
+%  framerule=0pt,
+%  columns=flexible,
+%  tabsize=2
+%}
+
+%\let\firstchar\lowercase
+%\let\oldprintglossaries\printglossaries
+%\def\printglossaries{\let\firstchar\uppercase\oldprintglossaries} %This helps the capitalizaiton between akronym list and in text. from  https://tex.stackexchange.com/questions/79907/howto-achieve-capitalized-description-in-glossary-table
+
+%makes equations have parens  %commented out on Jan 20; not sure what changed
+%\def\equationautorefname~#1\null{%
+  %Equation~(#1)\null}
+	
+%%%%%%%% Commented out on Jan 20 2020; it changed from (6.7)a to (6.7a) in the site of the equation, and to Equation 6.7a in the text.
+%\makeatletter  %This turns the equations into Equation () from https://tex.stackexchange.com/questions/191376/autoref-and-braces-around-equation-number July 21 19
+%\let\oldtheequation\theequation
+%\renewcommand\tagform@[1]{\maketag@@@{\ignorespaces#1\unskip\@@italiccorr}}
+%\renewcommand\theequation{(\oldtheequation)}
+%\makeatother
+
+    % First, save the current form of `\theequation`
+%    \let\oldtheequation\theequation
+%    \makeatletter
+%    \def\tagform@#1{\maketag@@@{\ignorespaces#1\unskip\@@italiccorr}}
+%    \renewcommand{\theequation}{(\oldtheequation)}
+%    \makeatother 
+		
+		
+%\renewcommand{\equationautorefname}{Eq.}  % This changes it from Equation () to Eq. ()
+
+% Uncomment this to force a particular year in the preliminary pages
+% If left commented out, the current year will be used instead
+%\year=2015
+
+\usepackage{multicol} % added 12/18/2019
+
+% Define custom macros here
+\def\ihat{\hat{\imath}}
+\def\jhat{\hat{\jmath}}
+\def\khat{\hat{k}}
+
+% Add all abbreviations here - Necessary for LIST OF ABBREVIATIONS
+% This acronym is not referenced at all and doesn't show up in the LIST OF ABBREVIATIONS
+%\newacronym{amcl}{AMCL}{Advanced Monte Carlo Localization} 
+
+\sethlcolor{lightgray}
+
+\begin{document}
+\def\thesistitle{On the Relation of Sentiment With Difficulty and Popularity in Stackoverflow}
+\def\studentname{Srilakshmi Sripathi}
+\def\degreename{Master of Science in Computer Science}
+\def\CommitteeChair{Dr. Mehdi Bagherzadeh}
+\def\AdvisorOne{Dr. Debatosh Debnath}
+\def\AdvisorTwo{Dr. Hua Ming}
+
+%\lipsum[1-50]
+
+
+
+%%% Start preliminary pages 
+%------------------------------------------
+% Formatting code -- DO NOT EDIT
+%------------------------------------------
+\singlespacing
+\pagenumbering{roman}
+\titleformat
+	{\chapter}
+	[display]
+	{\normalfont\filcenter\singlespacing}
+	{}
+	{0pc}
+	{#1}
+	[\vspace*{3pc}]
+%------------------------------------------
+
+%\GrizzCoverPage
+\include{front_matter}
+\include{lists}
+
+%%% Start main body
+%------------------------------------------
+% Formatting code -- DO NOT EDIT
+%------------------------------------------
+\pagenumbering{gobble}
+\pagenumbering{arabic}
+%\newpage
+%\begin{center}
+%\begin{center}
+
+%\end{center}
+%\end{center}
+\titleformat
+	{\chapter}
+	[display]
+	{\normalfont\filcenter\singlespacing}
+	{\vspace{0.15in}\MakeUppercase{\chaptertitlename~\thechapter}}
+	{1pc}
+	{#1}
+	[\vspace*{2pc}]
+\doublespacing
+
+% Equation spacing - adjust if necessary
+\setlength{\abovedisplayskip}{0.5pc}
+\setlength{\belowdisplayskip}{0.5pc}
+\setlength{\abovedisplayshortskip}{0pc}
+\setlength{\belowdisplayshortskip}{0.5pc}
+%------------------------------------------
+
+% Include each separate chapter source file here
+%Introduction
+\input{chapters/1.Introduction}
+%Methodology
+%\input{chapters/2.Methodology}
+\input{chapters/2.Methodology}
+% Results
+\input{chapters/3.Results}
+%RelatedWorks
+\input{chapters/4.Implications}
+%RelatedWorks
+\input{chapters/5.RelatedWorks}
+% Conculusion
+\input{chapters/6.Conclusion}
+
+% The \StartGrizzAppendices command switches the formatting for the 
+% remainder of the document -- Leave this alone
+\StartGrizzAppendices
+\include{Appendix/Appendix}
+
+% The \StartGrizzAppendices command switches the formatting for the 
+% remainder of the document -- Leave this alone
+% Include each separate appendix source file here
+
+% References -- DO NOT EDIT
+\phantomsection
+\addcontentsline{toc}{chapter}{REFERENCES}
+\singlespacing
+\renewcommand{\bibname}{\vspace*{10pt}REFERENCES}
+\bibliography{FinalRef}
+
+\end{document}
